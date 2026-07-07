@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Projects/SpacialDelivery/SpacialDelivery.vcxproj" Id="d9894096-15a7-4892-9f21-0973cfb86109" />
+</Solution>
