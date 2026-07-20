@@ -27,7 +27,7 @@ void InitScene(H::ILoadLua* lua) {
     //Cargar mapa
 
     //Cargar escenas
-    LuaSingleton::GetInstance()->loadScene("../../../Assets/ScriptsLua/Scene.lua");
+    LuaSingleton::GetInstance()->loadScene("./Assets/ScriptsLua/Scene.lua");
 }
 
 void FlushMessages(H::IManager* mngr) {

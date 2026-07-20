@@ -2,28 +2,28 @@ entities = { "Camera","CanvasUI","Cube","Cube1","Cube2","Cube3","Cube4","Cube5",
 
 Camera = {
   CameraComponent = {
-    farClipDistance = 200,
-    mainCamera = true,
-    showCursor = true,
-    target = {
-      z = 0,
-      y = 0,
-      x = 0,
-    },
-    name = "CameraH",
-    lookAtTarget = true,
     nearClipDistance = 5,
+    showCursor = true,
     backgroundColor = {
-      g = 0.10000000149012,
       r = 0.10000000149012,
       b = 0.10000000149012,
+      g = 0.10000000149012,
     },
+    target = {
+      x = 0,
+      y = 0,
+      z = 0,
+    },
+    lookAtTarget = true,
+    farClipDistance = 200,
+    mainCamera = true,
+    name = "CameraH",
   },
   Transform = {
     position = {
-      z = 20,
-      y = 0,
-      x = 7,
+      x = 7.0,
+      y = 0.0,
+      z = 20.0,
     },
   },
 }
@@ -35,50 +35,52 @@ CanvasUI = {
   },
   Transform = {
     position = {
-      z = 0,
-      y = 0,
-      x = 0,
+      x = 0.0,
+      y = 0.0,
+      z = 0.0,
     },
   },
 }
 
 Cube = {
-  Parent = "Muros_Collection",
   BoxCollider = {
-    halfExtents = {
-      z = 0.75,
+    positionOffset = {
+      x = 0,
       y = 2.0,
+      z = 0,
+    },
+    draw = false,
+    halfExtents = {
       x = 2.0,
+      y = 2.0,
+      z = 0.75,
     },
     trigger = false,
-    draw = false,
-    positionOffset = {
-      z = 0,
-      y = 2.0,
-      x = 0,
-    },
   },
   RigidBody = {
+    rbStatic = false,
     mass = 0.0,
     rbKinematic = true,
-    rbStatic = false,
   },
   Transform = {
-    position = {
-      z = 5.9775094985962,
-      y = 0.0,
-      x = 8.058198928833,
-    },
     rotation = {
-      z = -4.3846624606175e-25,
-      y = 1.1102230246252e-16,
-      x = 3.9493528447565e-09,
+      x = 0.0,
+      y = 0.0,
+      z = 0.0,
+    },
+    position = {
+      x = 8.058198928833,
+      y = 0.0,
+      z = 5.9775094985962,
     },
     scale = {
-      z = 1.0,
-      y = 1.0,
       x = 1.0,
+      y = 1.0,
+      z = 1.0,
     },
+  },
+  Parent = {
+    ParentName = "Muros_Collection",
   },
   RenderMesh = {
     mesh = "Cube.4380.mesh",
@@ -86,58 +88,60 @@ Cube = {
 }
 
 Cube1 = {
-  Parent = "Muros_Collection",
   BoxCollider = {
-    halfExtents = {
-      z = 0.75,
+    positionOffset = {
+      x = 0,
       y = 2.0,
+      z = 0,
+    },
+    draw = false,
+    halfExtents = {
       x = 2.0,
+      y = 2.0,
+      z = 0.75,
     },
     trigger = false,
-    draw = false,
-    positionOffset = {
-      z = 0,
-      y = 2.0,
-      x = 0,
+  },
+  Transform = {
+    rotation = {
+      x = 88.680633544922,
+      y = 28.33701133728,
+      z = 163.44132995605,
+    },
+    position = {
+      x = -7.988302230835,
+      y = 0.0,
+      z = -0.0,
+    },
+    scale = {
+      x = 1.0,
+      y = 1.0,
+      z = 1.0,
     },
   },
   RigidBody = {
+    rbStatic = true,
     mass = 0.0,
     rbKinematic = false,
-    rbStatic = true,
-  },
-  Transform = {
-    position = {
-      z = -0.0,
-      y = 0.0,
-      x = -7.988302230835,
-    },
-    rotation = {
-      z = 0.0,
-      y = 0.0,
-      x = 0.0,
-    },
-    scale = {
-      z = 1.0,
-      y = 1.0,
-      x = 1.0,
-    },
   },
   AudioSource = {
     mode = "3D",
-    velocity = {
-      z = 0,
-      y = 0,
-      x = 0,
-    },
-    volume = 0.80000001192093,
     filePaths = {
       filePath0 = "ruidoblanco.mp3",
     },
-    numSounds = 1,
     soundNames = {
       soundName0 = "ruidoblanco",
     },
+    numSounds = 1,
+    volume = 0.80000001192093,
+    velocity = {
+      x = 0,
+      y = 0,
+      z = 0,
+    },
+  },
+  Parent = {
+    ParentName = "Muros_Collection",
   },
   RenderMesh = {
     mesh = "Cube.4380.mesh",
@@ -145,42 +149,44 @@ Cube1 = {
 }
 
 Cube2 = {
-  Parent = "Muros_Collection",
   BoxCollider = {
-    halfExtents = {
-      z = 0.75,
+    positionOffset = {
+      x = 0,
       y = 2.0,
+      z = 0,
+    },
+    draw = false,
+    halfExtents = {
       x = 2.0,
+      y = 2.0,
+      z = 0.75,
     },
     trigger = false,
-    draw = false,
-    positionOffset = {
-      z = 0,
-      y = 2.0,
-      x = 0,
-    },
   },
   RigidBody = {
+    rbStatic = true,
     mass = 0.0,
     rbKinematic = false,
-    rbStatic = true,
   },
   Transform = {
-    position = {
-      z = 1.2465410232544,
-      y = 0.0,
-      x = 1.3109999895096,
-    },
     rotation = {
-      z = -0.0,
-      y = 0.70710676908493,
       x = 0.0,
+      y = 0.70710676908493,
+      z = -0.0,
+    },
+    position = {
+      x = 1.3109999895096,
+      y = 0.0,
+      z = 1.2465410232544,
     },
     scale = {
-      z = 1.0,
-      y = 1.0,
       x = 1.0,
+      y = 1.0,
+      z = 1.0,
     },
+  },
+  Parent = {
+    ParentName = "Muros_Collection",
   },
   RenderMesh = {
     mesh = "Cube.4380.mesh",
@@ -188,42 +194,44 @@ Cube2 = {
 }
 
 Cube3 = {
-  Parent = "Muros_Collection",
   BoxCollider = {
-    halfExtents = {
-      z = 0.75,
+    positionOffset = {
+      x = 0,
       y = 2.0,
+      z = 0,
+    },
+    draw = false,
+    halfExtents = {
       x = 2.0,
+      y = 2.0,
+      z = 0.75,
     },
     trigger = false,
-    draw = false,
-    positionOffset = {
-      z = 0,
-      y = 2.0,
-      x = 0,
-    },
   },
   RigidBody = {
+    rbStatic = true,
     mass = 0.0,
     rbKinematic = false,
-    rbStatic = true,
   },
   Transform = {
-    position = {
-      z = 5.2269577980042,
-      y = 0.0,
-      x = -10.689319610596,
-    },
     rotation = {
-      z = -0.0,
-      y = 90.0,
       x = 0.0,
+      y = 90.0,
+      z = -0.0,
+    },
+    position = {
+      x = -10.689319610596,
+      y = 0.0,
+      z = 5.2269577980042,
     },
     scale = {
-      z = 1.0,
-      y = 1.0,
       x = 1.0,
+      y = 1.0,
+      z = 1.0,
     },
+  },
+  Parent = {
+    ParentName = "Muros_Collection",
   },
   RenderMesh = {
     mesh = "Cube.4380.mesh",
@@ -231,42 +239,44 @@ Cube3 = {
 }
 
 Cube4 = {
-  Parent = "Muros_Collection",
   BoxCollider = {
-    halfExtents = {
-      z = 0.75,
+    positionOffset = {
+      x = 0,
       y = 2.0,
+      z = 0,
+    },
+    draw = false,
+    halfExtents = {
       x = 2.0,
+      y = 2.0,
+      z = 0.75,
     },
     trigger = false,
-    draw = false,
-    positionOffset = {
-      z = 0,
-      y = 2.0,
-      x = 0,
-    },
   },
   RigidBody = {
+    rbStatic = true,
     mass = 0.0,
     rbKinematic = false,
-    rbStatic = true,
   },
   Transform = {
-    position = {
-      z = 9.2089805603027,
-      y = 0.0,
-      x = -10.689319610596,
-    },
     rotation = {
-      z = -0.0,
-      y = 90.0,
       x = 0.0,
+      y = 90.0,
+      z = -0.0,
+    },
+    position = {
+      x = -10.689319610596,
+      y = 0.0,
+      z = 9.2089805603027,
     },
     scale = {
-      z = 1.0,
-      y = 1.0,
       x = 1.0,
+      y = 1.0,
+      z = 1.0,
     },
+  },
+  Parent = {
+    ParentName = "Muros_Collection",
   },
   RenderMesh = {
     mesh = "Cube.4380.mesh",
@@ -274,42 +284,44 @@ Cube4 = {
 }
 
 Cube5 = {
-  Parent = "Muros_Collection",
   BoxCollider = {
-    halfExtents = {
-      z = 0.75,
+    positionOffset = {
+      x = 0,
       y = 2.0,
+      z = 0,
+    },
+    draw = false,
+    halfExtents = {
       x = 2.0,
+      y = 2.0,
+      z = 0.75,
     },
     trigger = false,
-    draw = false,
-    positionOffset = {
-      z = 0,
-      y = 2.0,
-      x = 0,
-    },
   },
   RigidBody = {
+    rbStatic = true,
     mass = 0.0,
     rbKinematic = false,
-    rbStatic = true,
   },
   Transform = {
-    position = {
-      z = -0.0,
-      y = 0.0,
-      x = 0.0,
-    },
     rotation = {
-      z = 0.0,
-      y = 0.0,
       x = 0.0,
+      y = 0.0,
+      z = 0.0,
+    },
+    position = {
+      x = 0.0,
+      y = 0.0,
+      z = -0.0,
     },
     scale = {
-      z = 1.0,
-      y = 1.0,
       x = 1.0,
+      y = 1.0,
+      z = 1.0,
     },
+  },
+  Parent = {
+    ParentName = "Muros_Collection",
   },
   RenderMesh = {
     mesh = "Cube.4380.mesh",
@@ -318,143 +330,146 @@ Cube5 = {
 
 Listener = {
   AudioListener = {
-    velocity = {
-      z = 0,
-      y = 0,
-      x = 0,
-    },
     up = {
-      z = 0,
-      y = 1,
       x = 0,
+      y = 1,
+      z = 0,
+    },
+    velocity = {
+      x = 0,
+      y = 0,
+      z = 0,
     },
     forward = {
-      z = 1,
-      y = 0,
       x = 0,
+      y = 0,
+      z = 1,
     },
   },
   Transform = {
     position = {
-      z = 0,
-      y = 0,
-      x = 0,
+      x = 0.0,
+      y = 0.0,
+      z = 0.0,
     },
   },
 }
 
 MainLight = {
-  Light = {
-    type = "Directional",
-    specularColor = {
-      g = 1,
-      r = 1,
-      b = 1,
-    },
-    diffuseColor = {
-      g = 1,
-      r = 1,
-      b = 1,
-    },
-  },
   Transform = {
     position = {
-      z = 10.0,
-      y = 10.0,
       x = 0.0,
+      y = 10.0,
+      z = 10.0,
+    },
+  },
+  Light = {
+    diffuseColor = {
+      r = 1,
+      b = 1,
+      g = 1,
+    },
+    type = "Directional",
+    specularColor = {
+      r = 1,
+      b = 1,
+      g = 1,
     },
   },
 }
 
 Muros_Collection = {
-  Parent = "prueba",
+  Parent = {
+    ParentName = "prueba",
+  },
   Transform = {
     position = {
-      z = 0,
-      y = 0,
-      x = 0,
+      x = 0.0,
+      y = 0.0,
+      z = 0.0,
     },
-    
   },
 }
 
 Particula = {
   RenderParticle = {
-    rotationSpeedRangeEnd = 0,
-    position = {
-      z = 0,
-      y = 0,
-      x = 0,
-    },
-    scaleRate = 0,
-    sorted = true,
-    width = 10,
     direction = {
-      z = 0,
-      y = 1,
       x = 0,
+      y = 1,
+      z = 0,
     },
-    rotationRangeStart = 0,
-    image = "smokecolors.png",
-    minVelocity = 60,
-    rotationSpeedRangeStart = 0,
-    rotationRangeEnd = 0,
-    material = "Smoke",
-    maxVelocity = 80,
-    quota = 100,
-    cullEach = true,
     angle = 30,
-    emmisionRate = 10,
-    height = 10,
     timeToLive = 5,
+    quota = 100,
+    rotationRangeStart = 0,
+    position = {
+      x = 0,
+      y = 0,
+      z = 0,
+    },
+    image = "smokecolors.png",
     addImageAffector = true,
+    width = 10,
+    rotationSpeedRangeEnd = 0,
+    rotationRangeEnd = 0,
+    emmisionRate = 10,
+    sorted = true,
+    height = 10,
+    rotationSpeedRangeStart = 0,
+    maxVelocity = 80,
+    scaleRate = 0,
+    minVelocity = 60,
+    cullEach = true,
+    material = "Smoke",
   },
   Transform = {
     position = {
-      z = 0,
-      y = 0,
-      x = 40,
+      x = 40.0,
+      y = 0.0,
+      z = 0.0,
     },
   },
 }
 
 chair = {
-  Parent = "Muros_Collection",
   BoxCollider = {
-    halfExtents = {
-      z = 0.43484500050545,
+    positionOffset = {
+      x = 0,
       y = 0.49546399712563,
+      z = 0,
+    },
+    draw = false,
+    halfExtents = {
       x = 0.37329000234604,
+      y = 0.49546399712563,
+      z = 0.43484500050545,
     },
     trigger = false,
-    draw = false,
-    positionOffset = {
-      z = 0,
-      y = 0.49546399712563,
-      x = 0,
-    },
   },
   RigidBody = {
+    rbStatic = true,
     mass = 0.0,
     rbKinematic = false,
-    rbStatic = true,
   },
   Transform = {
-    position = {
-      z = 4.7962322235107,
-      y = 0.40496200323105,
-      x = 0.0,
-    },
     rotation = {
-      z = -0.0,
-      y = 0.0,
       x = 0.0,
+      y = 0.0,
+      z = -0.0,
+    },
+    position = {
+      x = 0.0,
+      y = 0.40496200323105,
+      z = 4.7962322235107,
     },
     scale = {
-      z = 1.0,
-      y = 1.0,
       x = 1.0,
+      y = 1.0,
+      z = 1.0,
     },
+  },
+  Parent = {
+    ParentName = "Muros_Collection",
   },
   RenderMesh = {
     mesh = "Cube.4279.mesh",
@@ -464,9 +479,9 @@ chair = {
 prueba = {
   Transform = {
     position = {
-      z = 0,
-      y = 0,
-      x = 0,
+      x = 0.0,
+      y = 0.0,
+      z = 0.0,
     },
   },
 }
