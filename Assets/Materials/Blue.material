@@ -4,7 +4,6 @@ material Blue {
             ambient 0.0 0.0 1.0 1  // Azul puro sin iluminación
             diffuse 0.0 0.0 1.0 1  // Azul puro sin sombras
             emissive 0.0 0.0 1.0 1  // Autoiluminado en azul
-            scene_blend replace  // Evita transparencia
             cull_hardware none  // Renderiza todas las caras
             depth_write off  // Evita que sea ocultado por otros objetos
             depth_check off  // Se renderiza siempre encima de todo

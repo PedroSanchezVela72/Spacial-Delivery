@@ -4,7 +4,6 @@ material Green {
             ambient 0.0 1.0 0.0 1  // Verde puro sin iluminación
             diffuse 0.0 1.0 0.0 1  // Verde puro sin sombras
             emissive 0.0 1.0 0.0 1  // Autoiluminado en verde
-            scene_blend replace  // Evita transparencia
             depth_write off  // Evita que sea ocultado por otros objetos
             depth_check off  // Se renderiza siempre encima de todo
             depth_bias -1

@@ -4,7 +4,6 @@ material Red {
             ambient 1.0 0.0 0.0 1  // Rojo puro sin iluminación
             diffuse 1.0 0.0 0.0 1  // Rojo puro sin sombras
             emissive 1.0 0.0 0.0 1  // Autoiluminado en rojo
-            scene_blend replace  // Evita transparencia
             depth_write off  // Evita que sea ocultado por otros objetos
             depth_check off  // Se renderiza siempre encima de todo
             depth_bias -1
