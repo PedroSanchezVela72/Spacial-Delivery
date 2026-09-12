@@ -1,0 +1,3 @@
+[EXCEPTION] -> Hora actual: 2:8:32: Contexto OpenGL: 0000000000010001
+[EXCEPTION] -> Hora actual: 2:8:32: No se encontro el sistema de renderizado OpenGL
+[EXCEPTION] -> Hora actual: 2:8:32: Error: No se encontró el archivo resources.cfg en Assets/resources_h.cfg

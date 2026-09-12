@@ -3,5 +3,22 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="../WonderEngine/Projects/Utils/Utils.vcxproj" Id="319d4d24-2809-4bd6-b7c3-4059290dd3d8" />
+  <Project Path="build/x64/debug/Main.exe">
+    <BuildType Project="Release" />
+    <Platform Project="x64" />
+    <Properties Name="DebuggerProjectSystem">
+      <Property Name="AttachLaunchAction" Value="No" />
+      <Property Name="Environment" Value="Predeterminado" />
+      <Property Name="Executable" Value="D:\Repo\Spacial-Delivery\build\x64\debug\Main.exe" />
+      <Property Name="IORedirection" Value="Auto" />
+      <Property Name="LaunchingEngine" Value="00000000-0000-0000-0000-000000000000" />
+      <Property Name="LaunchSQLEngine" Value="No" />
+      <Property Name="PortSupplier" Value="00000000-0000-0000-0000-000000000000" />
+      <Property Name="RemoteMachine" Value="DESKTOP-CHCFJ1R" />
+      <Property Name="StartingDirectory" Value="D:\Repo\Spacial-Delivery\build\x64\debug" />
+      <Property Name="UseLegacyDebugEngines" Value="No" />
+    </Properties>
+  </Project>
   <Project Path="Projects/SpacialDelivery/SpacialDelivery.vcxproj" Id="d9894096-15a7-4892-9f21-0973cfb86109" />
 </Solution>

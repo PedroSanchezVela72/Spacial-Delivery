@@ -4,12 +4,6 @@ material VanUnder {
     technique {
         pass {
             diffuse 0.657332 0.800007 0.010058 1.0
-            specular 0.5 0.0 0 0 0
-
-            // additional maps - requires RTSS
-            rtshader_system {
-                lighting_stage metal_roughness
-            }
         }
     }
 }

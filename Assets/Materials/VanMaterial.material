@@ -4,12 +4,6 @@ material VanMaterial {
     technique {
         pass {
             diffuse 0.000488 0.0 0.158045 1.0
-            specular 0.5 0.0 0 0 0
-
-            // additional maps - requires RTSS
-            rtshader_system {
-                lighting_stage metal_roughness
-            }
         }
     }
 }
