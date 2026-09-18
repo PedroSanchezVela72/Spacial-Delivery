@@ -15,9 +15,7 @@ namespace H {
 
 extern "C" HENGINE_API void InitManager(H::IManager* mngr, H::IDebugLog* excp);
 
-#ifndef _DEBUG
 extern "C" HENGINE_API bool InitJuego(H::IManager* mngr);
-#endif // DEBUG
 
 extern "C" HENGINE_API void InitScene(H::ILoadLua* mngr);
 

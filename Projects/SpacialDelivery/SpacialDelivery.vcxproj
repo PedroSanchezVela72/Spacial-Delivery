@@ -151,11 +151,16 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Src\Components\Player.h" />
     <ClInclude Include="..\..\Src\HEngineExports\HEngineExport.h" />
     <ClInclude Include="..\..\Src\HEngineExports\HEngineExtensions.h" />
+    <ClInclude Include="..\..\Src\Systems\GameSystem.h" />
+    <ClInclude Include="..\..\Src\Systems\PlayerSystem.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Src\HEngineExports\HEngineExport.cpp" />
+    <ClCompile Include="..\..\Src\Systems\GameSystem.cpp" />
+    <ClCompile Include="..\..\Src\Systems\PlayerSystem.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -29,12 +29,13 @@ echo ================================
 echo Compilando solucion (%CONFIG%) y creando dll
 
 :: COMPILAR LA SOLUCIÓN DEL JUEGO ::
-msbuild ".\SpacialDelivery.sln" -p:Configuration=%CONFIG% -noLogo -verbosity:minimal -maxCpuCount /p:AdditionalOptions=/FS
+msbuild ".\SpacialDelivery.slnx" -t:Rebuild -p:Configuration=%CONFIG% -noLogo -verbosity:minimal -maxCpuCount /p:AdditionalOptions=/FS
 
 :: Definir rutas
 set "CARPETA=build\x64\%CONFIG:~0,1%%CONFIG:~1%"
 if /I "%CONFIG%"=="debug" (
     set "DLL_SRC=.\lib\SpacialDelivery\x64\Debug\HEngineExport_d.dll"
+    set "PDB_SRC=.\lib\SpacialDelivery\x64\Debug\HEngineExport_d.pdb"
 ) else (
     set "DLL_SRC=.\lib\SpacialDelivery\x64\Release\HEngineExport.dll"
 )
@@ -42,6 +43,9 @@ if /I "%CONFIG%"=="debug" (
 :: Copiar DLL al build correspondiente
 if exist "%CARPETA%" (
     copy "%DLL_SRC%" "%CARPETA%\"
+    if /I "%CONFIG%"=="debug" (
+        copy "%PDB_SRC%" "%CARPETA%\"
+    )
     echo Archivo %CONFIG% copiado con exito.
 ) else (
     echo La carpeta %CARPETA% no existe. No se copio el archivo.

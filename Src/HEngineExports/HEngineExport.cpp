@@ -3,6 +3,9 @@
 #include "LuaSingleton.h"
 #include "ExceptionSingleton.h"
 
+#include "GameSystem.h"
+#include "PlayerSystem.h"
+
 using namespace H;
 
 void InitManager(H::IManager* mngr, H::IDebugLog* excp) {
@@ -10,16 +13,15 @@ void InitManager(H::IManager* mngr, H::IDebugLog* excp) {
     mngr->init(_LAST_GRP_ID, _LAST_HDLR_ID, _LAST_SYS_ID, _LAST_CMP_ID);
 }
 
-#ifndef _DEBUG
-bool InitJuego(H::Manager* mngr)
+bool InitJuego(H::IManager* mngr)
 {
     bool init = true;
     //Añadir sistemas nuevos
-
+    mngr->addSystem<GameSystem>();
+    mngr->addSystem<PlayerSystem>();
 
     return init;
 }
-#endif // !_DEBUG
 
 void InitScene(H::ILoadLua* lua) {
     LuaSingleton::Init(lua);

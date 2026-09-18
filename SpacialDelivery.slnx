@@ -3,7 +3,6 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="../WonderEngine/Projects/Utils/Utils.vcxproj" Id="319d4d24-2809-4bd6-b7c3-4059290dd3d8" />
   <Project Path="build/x64/debug/Main.exe">
     <BuildType Project="Release" />
     <Platform Project="x64" />

@@ -19,6 +19,15 @@
     <Filter Include="Archivos de origen\HEngineExport">
       <UniqueIdentifier>{4e208558-43f2-4d09-aba4-c286d8c55a68}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de origen\System">
+      <UniqueIdentifier>{f765ff81-5df2-4dab-b44b-13e3a8b62045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\System">
+      <UniqueIdentifier>{c2d3353a-846a-4a13-baf6-b691a81c033e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Components">
+      <UniqueIdentifier>{6d7839d4-98a6-4764-b8e6-85481325e6a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Src\HEngineExports\HEngineExport.h">
@@ -27,10 +36,25 @@
     <ClInclude Include="..\..\Src\HEngineExports\HEngineExtensions.h">
       <Filter>Archivos de encabezado\HEngineExport</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Src\Systems\GameSystem.h">
+      <Filter>Archivos de encabezado\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Systems\PlayerSystem.h">
+      <Filter>Archivos de encabezado\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Components\Player.h">
+      <Filter>Archivos de encabezado\Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Src\HEngineExports\HEngineExport.cpp">
       <Filter>Archivos de origen\HEngineExport</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Systems\GameSystem.cpp">
+      <Filter>Archivos de origen\System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Systems\PlayerSystem.cpp">
+      <Filter>Archivos de origen\System</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

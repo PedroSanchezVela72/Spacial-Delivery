@@ -4,15 +4,20 @@ namespace H {
 	#ifndef EXTENSION_COMPONENTS_LIST_H
 	#define EXTENSION_COMPONENTS_LIST_H
 
-	#define EXTENSION_COMPONENTS_LIST
+	#define EXTENSION_COMPONENTS_LIST \
+		X(_cmp_PLAYER)
 
 	#endif
 
 	#ifndef EXTENSION_HANDLERS_LIST_H
 	#define EXTENSION_HANDLERS_LIST_H
 
-	#define EXTENSION_HANDLERS_LIST
-
+	#define EXTENSION_HANDLERS_LIST \
+		X(_hdlr_ASTEROIDS) \
+		X(_hdlr_HOUSES) \
+		X(_hdlr_SPAWNS) \
+		X(_hdlr_FURGO) \
+		X(_hdlr_PLAYER)
 	#endif
 
 	#ifndef EXTENSION_GROUPS_LIST_H
@@ -25,13 +30,16 @@ namespace H {
 	#ifndef EXTENSION_SYSTEMS_LIST_H
 	#define EXTENSION_SYSTEMS_LIST_H
 
-	#define EXTENSION_SYSTEMS_LIST
+	#define EXTENSION_SYSTEMS_LIST \
+		X(_sys_GAME) \
+		X(_sys_PLAYER)
 	#endif
 
 	#ifndef EXTENSION_MESSAGES_LIST_H
 	#define EXTENSION_MESSAGES_LIST_H
 
-	#define EXTENSION_MESSAGES_LIST
+	#define EXTENSION_MESSAGES_LIST \
+		X(_m_RESETMAP)
 
 	#endif
 
