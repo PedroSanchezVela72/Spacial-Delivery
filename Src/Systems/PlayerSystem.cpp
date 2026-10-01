@@ -7,6 +7,7 @@
 #include "RigidBody.h"
 #include "Player.h"
 #include "Transform.h"
+#include "BoxCollider.h"
 
 using namespace H;
 
@@ -18,19 +19,28 @@ void PlayerSystem::initSystem() {
 }
 
 void PlayerSystem::update(double deltaTime) {
-
 	float inputx = 0;
 	float inputz = 0;
 
-	if (keyPressed[W]) inputz -= 1;
-	if (keyPressed[S]) inputz += 1;
-	if (keyPressed[A]) inputx -= 1;
-	if (keyPressed[D]) inputx += 1;
+	if (!inVan) {
 
-	if (inputx != 0 || inputz != 0) {
-		accelerate(inputx*deltaTime, inputz*deltaTime);
+		if (keyPressed[W]) inputz -= 1;
+		if (keyPressed[S]) inputz += 1;
+		if (keyPressed[A]) inputx -= 1;
+		if (keyPressed[D]) inputx += 1;
+
+		if (inputx != 0 || inputz != 0) {
+			accelerate(inputx * deltaTime, inputz * deltaTime);
+		}
+	}
+	else {
+		if (keyPressed[W]) inputz -= 1;
+		if (keyPressed[S]) inputz += 1;
 	}
 
+	Transform* pivotTr = _mngr->getComponent<Transform>(pivot);
+	QuaternionF yawQuat = QuaternionF::fromAngleAxis(cameraYaw, Vector3F(0, 1, 0));
+	pivotTr->rotation = yawQuat;
 }
 
 void PlayerSystem::fixedUpdate(double deltaTime) {
@@ -48,6 +58,7 @@ void PlayerSystem::receive(const Message* m) {
 		if (m->key.key == KeyCode::HENGINE_W) keyPressed[W] = true;
 		if (m->key.key == KeyCode::HENGINE_Q) keyPressed[Q] = true;
 		if (m->key.key == KeyCode::HENGINE_E) keyPressed[E] = true;
+		if (m->key.key == KeyCode::HENGINE_F) if(canEnterVan) switchToVan();
 		if (m->key.key == KeyCode::HENGINE_SPACE) keyPressed[SPACE] = true;
 		if (m->key.key == KeyCode::HENGINE_ESCAPE) _mngr->exit();
 		break;
@@ -62,6 +73,14 @@ void PlayerSystem::receive(const Message* m) {
 		break;
 	case _m_MOUSE_MOTION:
 		moveCamera(m->mouse_motion.xrel, m->mouse_motion.yrel);
+		break;
+	case _m_ON_COLLISION_ENTER:
+		if (m->on_collision.entityB == van)
+			canEnterVan = true;
+		break;
+	case _m_ON_COLLISION_EXIT:
+		if (m->on_collision.entityB == van)
+			canEnterVan = false;
 		break;
 	default:
 		break;
@@ -83,6 +102,22 @@ void PlayerSystem::addEntity(Entity* ent, const std::string name) {
 	}
 	if (lua->hasComponent(name, { "CameraComponent" })) {
 		camera = ent;
+		Transform* cameraTr = _mngr->getComponent<Transform>(camera);
+		cameraPitch = cameraTr->rotation.getPitch(false);
+		cameraYaw = cameraTr->rotation.getYaw(false);
+	}
+	if (name == "Furgo") {
+		van = ent;
+		_mngr->getSystem<IPhysicsSystem>()->setColliderFilter(_mngr->getComponent<BoxCollider>(ent), _hdlr_HANDS);
+	}
+	if(name == "PlayerPivot")
+		pivot = ent;
+	if (name == "Hands") {
+		hands = ent;
+		_mngr->getSystem<IPhysicsSystem>()->setColliderFilter(_mngr->getComponent<BoxCollider>(ent), _hdlr_HANDS);
+	}
+	if (name.find("Box") == 0) {
+		_mngr->getSystem<IPhysicsSystem>()->setColliderFilter(_mngr->getComponent<BoxCollider>(ent), _hdlr_HANDS);
 	}
 }
 
@@ -133,4 +168,21 @@ void PlayerSystem::moveCamera(float x, float y) {
 	QuaternionF pitchQuat = QuaternionF::fromAngleAxis(cameraPitch, Vector3F(1, 0, 0));
 
 	cameraTransform->rotation = (yawQuat * pitchQuat).normalize();
+}
+
+void PlayerSystem::switchToVan() {
+	Transform* playerTr = _mngr->getComponent<Transform>(player);
+	Transform* vanTr = _mngr->getComponent<Transform>(van);
+	playerTr->position = vanTr->position;
+	inVan = true;
+	_mngr->getSystem<IPhysicsSystem>()->changeGravity(0);
+	_mngr->getComponent<BoxCollider>(hands)->active = false;
+}
+
+void PlayerSystem::switchToPlayer() {
+	Transform* playerTr = _mngr->getComponent<Transform>(player);
+	Transform* vanTr = _mngr->getComponent<Transform>(van);
+	playerTr->position = vanTr->position;
+	inVan = false;
+	_mngr->getSystem<IPhysicsSystem>()->changeGravity(9.8);
 }

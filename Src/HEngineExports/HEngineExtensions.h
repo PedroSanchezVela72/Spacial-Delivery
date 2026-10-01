@@ -17,7 +17,8 @@ namespace H {
 		X(_hdlr_HOUSES) \
 		X(_hdlr_SPAWNS) \
 		X(_hdlr_FURGO) \
-		X(_hdlr_PLAYER)
+		X(_hdlr_PLAYER)\
+		X(_hdlr_HANDS)
 	#endif
 
 	#ifndef EXTENSION_GROUPS_LIST_H

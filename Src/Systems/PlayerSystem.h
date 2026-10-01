@@ -20,14 +20,22 @@ private:
 	void addEntity(H::Entity* ent, const std::string name);
 	void accelerate(float x, float y);
 	void moveCamera(float x, float y);
+	void switchToVan();
+	void switchToPlayer();
 	H::Vector3F getMovementDirection(float inputX, float inputZ) const;
 	H::Vector3F getForwardXZ() const;
 
 	bool keyPressed[MAX_KEYS] = {false};
 	H::Entity* player;
+	H::Entity* van;
 	H::Entity* camera;
+	H::Entity* pivot;
+	H::Entity* hands;
 	float sensitivity = 0.2;
 
 	float cameraPitch, cameraYaw = 0;
 	float speed = 10;
+	bool inVan = false;
+	bool canEnterVan = false;
+	bool canPickBox = false;
 };
