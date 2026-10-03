@@ -1,20 +1,20 @@
-entities = { "Asteroid01","Asteroid02","Asteroid03","Asteroid04","AsteroidCollider01","AsteroidCollider02","AsteroidCollider03","AsteroidCollider04","Box01","Box02","Box03","Camera","CanvasUI","Furgo","FurgoPuertaDer","FurgoPuertaIzq","Hands","House01","House02","House03","MainLight","Player", "PlayerPivot","PostOffice","Spawn01","Spawn02","Spawn03","Spawn04","Spawn05","Spawn06"}
+entities = { "Asteroid01","Asteroid02","Asteroid03","Asteroid04","AsteroidCollider01","AsteroidCollider02","AsteroidCollider03","AsteroidCollider04","Box01","Box02","Box03","Camera","CameraVan","CanvasUI","Furgo","FurgoPuertaDer","FurgoPuertaIzq","Hands","House01","House02","House03","MainLight","Player","PlayerPivot","PostOffice","Spawn01","Spawn02","Spawn03","Spawn04","Spawn05","Spawn06"}
 
 Asteroid01 = {
   Transform = {
-    scale = {
-      x = 5.0,
-      z = 5.0,
-      y = 5.0,
-    },
     position = {
-      x = 1.1068897247314,
       z = 13.63304233551,
+      x = 1.1068897247314,
       y = -19.032091140747,
     },
+    scale = {
+      z = 5.0,
+      x = 5.0,
+      y = 5.0,
+    },
     rotation = {
-      x = -170.99998474121,
       z = 180.0,
+      x = -170.99998474121,
       y = -79.342018127441,
     },
   },
@@ -25,19 +25,19 @@ Asteroid01 = {
 
 Asteroid02 = {
   Transform = {
-    scale = {
-      x = 5.0,
-      z = 5.0,
-      y = 5.0,
-    },
     position = {
-      x = 0.0,
       z = 0.0,
+      x = 0.0,
       y = 0.0,
     },
+    scale = {
+      z = 5.0,
+      x = 5.0,
+      y = 5.0,
+    },
     rotation = {
-      x = -170.99998474121,
       z = 180.0,
+      x = -170.99998474121,
       y = -79.342018127441,
     },
   },
@@ -49,19 +49,19 @@ Asteroid02 = {
 
 Asteroid03 = {
   Transform = {
-    scale = {
-      x = 5.0,
-      z = 5.0,
-      y = 5.0,
-    },
     position = {
-      x = 0.0,
       z = 0.0,
+      x = 0.0,
       y = 0.0,
     },
+    scale = {
+      z = 5.0,
+      x = 5.0,
+      y = 5.0,
+    },
     rotation = {
-      x = -170.99998474121,
       z = 180.0,
+      x = -170.99998474121,
       y = -79.342018127441,
     },
   },
@@ -73,19 +73,19 @@ Asteroid03 = {
 
 Asteroid04 = {
   Transform = {
-    scale = {
-      x = 5.0,
-      z = 5.0,
-      y = 5.0,
-    },
     position = {
-      x = 0.0,
       z = 0.0,
+      x = 0.0,
       y = 0.0,
     },
+    scale = {
+      z = 5.0,
+      x = 5.0,
+      y = 5.0,
+    },
     rotation = {
-      x = -170.99998474121,
       z = 180.0,
+      x = -170.99998474121,
       y = -79.342018127441,
     },
   },
@@ -96,201 +96,201 @@ Asteroid04 = {
 }
 
 AsteroidCollider01 = {
+  Transform = {
+    position = {
+      z = 0.49005889892578,
+      x = 0.0,
+      y = 0.2034912109375,
+    },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
+    rotation = {
+      z = -8.5139074325562,
+      x = 1.6470321416855,
+      y = 0.24662801623344,
+    },
+  },
   RigidBody = {
+    rbKinematic = false,
     rbStatic = true,
     mass = 0.0,
-    rbKinematic = false,
   },
   Parent = "Asteroid01",
   BoxCollider = {
-    draw = true,
-    positionOffset = {
-      x = 0,
-      z = 0,
-      y = 10,
-    },
+    trigger = false,
     halfExtents = {
-      x = 18.0,
       z = 10.0,
+      x = 18.0,
       y = 7.0,
     },
-    trigger = false,
-  },
-  Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
+    positionOffset = {
+      z = 0,
+      x = 0,
+      y = 10,
     },
-    position = {
-      x = 0.0,
-      z = 0.49005889892578,
-      y = 0.2034912109375,
-    },
-    rotation = {
-      x = 1.6470321416855,
-      z = -8.5139074325562,
-      y = 0.24662801623344,
-    },
+    draw = true,
   },
 }
 
 AsteroidCollider02 = {
+  Transform = {
+    position = {
+      z = -0.0017428398132324,
+      x = 0.19277954101562,
+      y = 0.2034912109375,
+    },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
+    rotation = {
+      z = -8.5139074325562,
+      x = 1.6470321416855,
+      y = 0.24662801623344,
+    },
+  },
   RigidBody = {
+    rbKinematic = false,
     rbStatic = true,
     mass = 0.0,
-    rbKinematic = false,
   },
   Parent = "Asteroid02",
   BoxCollider = {
-    draw = true,
-    positionOffset = {
-      x = 0,
-      z = 0,
-      y = 10,
-    },
+    trigger = false,
     halfExtents = {
-      x = 18.0,
       z = 10.0,
+      x = 18.0,
       y = 7.0,
     },
-    trigger = false,
-  },
-  Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
+    positionOffset = {
+      z = 0,
+      x = 0,
+      y = 10,
     },
-    position = {
-      x = 0.19277954101562,
-      z = -0.0017428398132324,
-      y = 0.2034912109375,
-    },
-    rotation = {
-      x = 1.6470321416855,
-      z = -8.5139074325562,
-      y = 0.24662801623344,
-    },
+    draw = true,
   },
 }
 
 AsteroidCollider03 = {
+  Transform = {
+    position = {
+      z = 0.49005889892578,
+      x = 0.0,
+      y = 0.2034912109375,
+    },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
+    rotation = {
+      z = -8.5139074325562,
+      x = 1.6470321416855,
+      y = 0.24662801623344,
+    },
+  },
   RigidBody = {
+    rbKinematic = false,
     rbStatic = true,
     mass = 0.0,
-    rbKinematic = false,
   },
   Parent = "Asteroid03",
   BoxCollider = {
-    draw = true,
-    positionOffset = {
-      x = 0,
-      z = 0,
-      y = 10,
-    },
+    trigger = false,
     halfExtents = {
-      x = 18.0,
       z = 10.0,
+      x = 18.0,
       y = 7.0,
     },
-    trigger = false,
-  },
-  Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
+    positionOffset = {
+      z = 0,
+      x = 0,
+      y = 10,
     },
-    position = {
-      x = 0.0,
-      z = 0.49005889892578,
-      y = 0.2034912109375,
-    },
-    rotation = {
-      x = 1.6470321416855,
-      z = -8.5139074325562,
-      y = 0.24662801623344,
-    },
+    draw = true,
   },
 }
 
 AsteroidCollider04 = {
+  Transform = {
+    position = {
+      z = 0.49005889892578,
+      x = 0.0,
+      y = 0.2034912109375,
+    },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
+    rotation = {
+      z = -8.5139074325562,
+      x = 1.6470321416855,
+      y = 0.24662801623344,
+    },
+  },
   RigidBody = {
+    rbKinematic = false,
     rbStatic = true,
     mass = 0.0,
-    rbKinematic = false,
   },
   Parent = "Asteroid04",
   BoxCollider = {
-    draw = true,
-    positionOffset = {
-      x = 0,
-      z = 0,
-      y = 10,
-    },
+    trigger = false,
     halfExtents = {
-      x = 18.0,
       z = 10.0,
+      x = 18.0,
       y = 7.0,
     },
-    trigger = false,
-  },
-  Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
+    positionOffset = {
+      z = 0,
+      x = 0,
+      y = 10,
     },
-    position = {
-      x = 0.0,
-      z = 0.49005889892578,
-      y = 0.2034912109375,
-    },
-    rotation = {
-      x = 1.6470321416855,
-      z = -8.5139074325562,
-      y = 0.24662801623344,
-    },
+    draw = true,
   },
 }
 
 Box01 = {
-  Transform = {
-    scale = {
-      x = 0.5,
+  BoxCollider = {
+    trigger = false,
+    halfExtents = {
       z = 0.5,
+      x = 0.5,
       y = 0.5,
     },
-    position = {
-      x = -2.8167724609375,
-      z = 9.9585876464844,
-      y = -0.40574550628662,
-    },
-    rotation = {
-      x = 0.0,
-      z = 0.0,
-      y = 0.0,
-    },
-  },
-  RigidBody = {
-    rbStatic = true,
-    mass = 0.0,
-    rbKinematic = false,
-  },
-  BoxCollider = {
-    draw = true,
     positionOffset = {
-      x = 0,
       z = 0,
+      x = 0,
       y = 0,
     },
-    halfExtents = {
-      x = 0.5,
+    draw = true,
+  },
+  RigidBody = {
+    rbKinematic = false,
+    rbStatic = true,
+    mass = 0.0,
+  },
+  Transform = {
+    position = {
+      z = 9.9585876464844,
+      x = -2.8167724609375,
+      y = -0.40574550628662,
+    },
+    scale = {
       z = 0.5,
+      x = 0.5,
       y = 0.5,
     },
-    trigger = false,
+    rotation = {
+      z = 0.0,
+      x = 0.0,
+      y = 0.0,
+    },
   },
   RenderMesh = {
     mesh = "CardboardBox.mesh",
@@ -298,41 +298,41 @@ Box01 = {
 }
 
 Box02 = {
-  Transform = {
-    scale = {
-      x = 0.5,
+  BoxCollider = {
+    trigger = false,
+    halfExtents = {
       z = 0.5,
+      x = 0.5,
       y = 0.5,
     },
-    position = {
-      x = -3.8298738002777,
-      z = 9.9595880508423,
-      y = -0.39845561981201,
-    },
-    rotation = {
-      x = 0.0,
-      z = 0.0,
-      y = 0.0,
-    },
-  },
-  RigidBody = {
-    rbStatic = true,
-    mass = 0.0,
-    rbKinematic = false,
-  },
-  BoxCollider = {
-    draw = true,
     positionOffset = {
-      x = 0,
       z = 0,
+      x = 0,
       y = 0,
     },
-    halfExtents = {
-      x = 0.5,
+    draw = true,
+  },
+  RigidBody = {
+    rbKinematic = false,
+    rbStatic = true,
+    mass = 0.0,
+  },
+  Transform = {
+    position = {
+      z = 9.9595880508423,
+      x = -3.8298738002777,
+      y = -0.39845561981201,
+    },
+    scale = {
       z = 0.5,
+      x = 0.5,
       y = 0.5,
     },
-    trigger = false,
+    rotation = {
+      z = 0.0,
+      x = 0.0,
+      y = 0.0,
+    },
   },
   RenderMesh = {
     mesh = "CardboardBox.mesh",
@@ -340,41 +340,41 @@ Box02 = {
 }
 
 Box03 = {
-  Transform = {
-    scale = {
-      x = 0.5,
+  BoxCollider = {
+    trigger = false,
+    halfExtents = {
       z = 0.5,
+      x = 0.5,
       y = 0.5,
     },
-    position = {
-      x = -3.3367774486542,
-      z = 9.9518623352051,
-      y = 0.55851531028748,
-    },
-    rotation = {
-      x = 0.0,
-      z = 0.0,
-      y = 0.0,
-    },
-  },
-  RigidBody = {
-    rbStatic = true,
-    mass = 0.0,
-    rbKinematic = false,
-  },
-  BoxCollider = {
-    draw = true,
     positionOffset = {
-      x = 0,
       z = 0,
+      x = 0,
       y = 0,
     },
-    halfExtents = {
-      x = 0.5,
+    draw = true,
+  },
+  RigidBody = {
+    rbKinematic = false,
+    rbStatic = true,
+    mass = 0.0,
+  },
+  Transform = {
+    position = {
+      z = 9.9518623352051,
+      x = -3.3367774486542,
+      y = 0.55851531028748,
+    },
+    scale = {
       z = 0.5,
+      x = 0.5,
       y = 0.5,
     },
-    trigger = false,
+    rotation = {
+      z = 0.0,
+      x = 0.0,
+      y = 0.0,
+    },
   },
   RenderMesh = {
     mesh = "CardboardBox.mesh",
@@ -384,87 +384,121 @@ Box03 = {
 Camera = {
   Transform = {
     position = {
-      x = 0.0,
       z = 0.0,
+      x = 0.0,
       y = 2.259672164917,
     },
     rotation = {
-      x = 0.0,
       z = 0.0,
+      x = 0.0,
       y = 0.0,
     },
   },
-  Parent = "Player",
   CameraComponent = {
-    mainCamera = true,
-    farClipDistance = 200,
-    name = "CameraH",
-    target = {
-      x = 0,
-      z = 0,
-      y = 0,
-    },
-    showCursor = false,
+    nearClipDistance = 0.20000000298023,
     backgroundColor = {
-      g = 0.10000000149012,
       r = 0.10000000149012,
+      g = 0.10000000149012,
       b = 0.10000000149012,
     },
+    farClipDistance = 200,
+    mainCamera = true,
+    showCursor = false,
+    name = "CameraH",
     lookAtTarget = true,
-    nearClipDistance = 0.2,
+    target = {
+      z = 0,
+      x = 0,
+      y = 0,
+    },
   },
+  Parent = "Player",
+}
+
+CameraVan = {
+  Transform = {
+    position = {
+      z = -6.8078632354736,
+      x = 0.0,
+      y = 3.720639705658,
+    },
+    rotation = {
+      z = 0.0,
+      x = 0.0,
+      y = 0.0,
+    },
+  },
+  CameraComponent = {
+    nearClipDistance = 0.20000000298023,
+    backgroundColor = {
+      r = 0.10000000149012,
+      g = 0.10000000149012,
+      b = 0.10000000149012,
+    },
+    farClipDistance = 200,
+    mainCamera = false,
+    showCursor = false,
+    name = "CameraVan",
+    lookAtTarget = true,
+    target = {
+      z = 0,
+      x = 0,
+      y = 0,
+    },
+  },
+  Parent = "Furgo",
 }
 
 CanvasUI = {
   Transform = {
     position = {
-      x = 0.0,
       z = 0.0,
+      x = 0.0,
       y = 0.0,
     },
   },
   Canvas = {
-    resizable = true,
     movable = true,
+    resizable = true,
   },
 }
 
 Furgo = {
-  Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
-    },
-    position = {
-      x = -3.2766876220703,
-      z = 19.101589202881,
-      y = 0.0,
-    },
-    rotation = {
-      x = 0.0,
-      z = 0.0,
-      y = 0.0,
-    },
-  },
-  RigidBody = {
-    rbStatic = true,
-    mass = 0.0,
-    rbKinematic = false,
-  },
   BoxCollider = {
-    draw = true,
-    positionOffset = {
-      x = 0,
-      z = -2.5,
-      y = 1,
-    },
+    trigger = false,
     halfExtents = {
-      x = 2,
       z = 3,
+      x = 2,
       y = 2,
     },
-    trigger = false,
+    positionOffset = {
+      z = -2.5,
+      x = 0,
+      y = 1,
+    },
+    draw = true,
+  },
+  RigidBody = {
+    rbKinematic = false,
+    rbStatic = true,
+    mass = 0.0,
+  },
+  Transform = {
+    position = {
+      z = 19.101589202881,
+      x = -3.2766876220703,
+      y = 0.0,
+    },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
+    rotation = {
+      z = 0.0,
+      x = 0.0,
+      y = 0.0,
+    },
   },
   RenderMesh = {
     mesh = "Van.mesh",
@@ -473,19 +507,19 @@ Furgo = {
 
 FurgoPuertaDer = {
   Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
-    },
     position = {
-      x = -1.6579999923706,
       z = -5.4714727401733,
+      x = -1.6579999923706,
       y = 1.0052373409271,
     },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
     rotation = {
-      x = 0.0,
       z = 0.0,
+      x = 0.0,
       y = 0.0,
     },
   },
@@ -497,19 +531,19 @@ FurgoPuertaDer = {
 
 FurgoPuertaIzq = {
   Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
-    },
     position = {
-      x = 1.6579999923706,
       z = -5.4710001945496,
+      x = 1.6579999923706,
       y = 1.0049999952316,
     },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
     rotation = {
-      x = 0.0,
       z = 0.0,
+      x = 0.0,
       y = 0.0,
     },
   },
@@ -521,310 +555,310 @@ FurgoPuertaIzq = {
 
 Hands = {
   Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
+    position = {
+      z = 0.5,
+      x = 0.0,
       y = 1.0,
     },
-    position = {
-      x = 0,
-      z = 0.5,
+    scale = {
+      z = 1.0,
+      x = 1.0,
       y = 1.0,
     },
     rotation = {
-      x = 0.0,
       z = 0.0,
+      x = 0.0,
       y = 0.0,
     },
   },
-  Parent = "PlayerPivot",
-  BoxCollider = {
-    draw = true,
-    positionOffset = {
-      x = 0,
-      z = 0,
-      y = 0.5,
-    },
-    halfExtents = {
-      x = 0.5,
-      z = 0.5,
-      y = 1.5,
-    },
-    trigger = true,
-  },
   RigidBody = {
+    rbKinematic = false,
     rbStatic = true,
     mass = 0.0,
-    rbKinematic = false,
+  },
+  Parent = "PlayerPivot",
+  BoxCollider = {
+    trigger = true,
+    halfExtents = {
+      z = 0.5,
+      x = 0.5,
+      y = 1.5,
+    },
+    positionOffset = {
+      z = 0,
+      x = 0,
+      y = 0.5,
+    },
+    draw = true,
   },
 }
 
 House01 = {
-  Transform = {
-    scale = {
-      x = 0.69999998807907,
-      z = 0.69999998807907,
-      y = 0.69999998807907,
-    },
-    position = {
-      x = -2.2711601257324,
-      z = 0.048837661743164,
-      y = 3.8653907775879,
-    },
-    rotation = {
-      x = 178.8058013916,
-      z = -170.1697845459,
-      y = -6.9097547531128,
-    },
-  },
-  Parent = "Asteroid02",
   BoxCollider = {
-    draw = true,
-    positionOffset = {
-      x = 0,
-      z = 0,
-      y = 2.0,
-    },
+    trigger = false,
     halfExtents = {
-      x = 4.0,
       z = 7.0,
+      x = 4.0,
       y = 4.0,
     },
-    trigger = false,
+    positionOffset = {
+      z = 0,
+      x = 0,
+      y = 2.0,
+    },
+    draw = true,
   },
+  RigidBody = {
+    rbKinematic = false,
+    rbStatic = true,
+    mass = 0.0,
+  },
+  Parent = "Asteroid02",
   RenderMesh = {
     mesh = "CasaRoja.mesh",
   },
-  RigidBody = {
-    rbStatic = true,
-    mass = 0.0,
-    rbKinematic = false,
+  Transform = {
+    position = {
+      z = 0.048837661743164,
+      x = -2.2711601257324,
+      y = 3.8653907775879,
+    },
+    scale = {
+      z = 0.69999998807907,
+      x = 0.69999998807907,
+      y = 0.69999998807907,
+    },
+    rotation = {
+      z = -170.1697845459,
+      x = 178.8058013916,
+      y = -6.9097547531128,
+    },
   },
 }
 
 House02 = {
-  Transform = {
-    scale = {
-      x = 0.69999998807907,
-      z = 0.69999998807907,
-      y = 0.69999998807907,
-    },
-    position = {
-      x = -2.2711601257324,
-      z = 0.048837661743164,
-      y = 3.8653907775879,
-    },
-    rotation = {
-      x = 178.8058013916,
-      z = -170.1697845459,
-      y = -6.9097547531128,
-    },
-  },
-  Parent = "Asteroid03",
   BoxCollider = {
-    draw = true,
-    positionOffset = {
-      x = 0,
-      z = 0,
-      y = 2.0,
-    },
+    trigger = false,
     halfExtents = {
-      x = 4.0,
       z = 7.0,
+      x = 4.0,
       y = 4.0,
     },
-    trigger = false,
+    positionOffset = {
+      z = 0,
+      x = 0,
+      y = 2.0,
+    },
+    draw = true,
   },
+  RigidBody = {
+    rbKinematic = false,
+    rbStatic = true,
+    mass = 0.0,
+  },
+  Parent = "Asteroid03",
   RenderMesh = {
     mesh = "CasaAzul.mesh",
   },
-  RigidBody = {
-    rbStatic = true,
-    mass = 0.0,
-    rbKinematic = false,
+  Transform = {
+    position = {
+      z = 0.048837661743164,
+      x = -2.2711601257324,
+      y = 3.8653907775879,
+    },
+    scale = {
+      z = 0.69999998807907,
+      x = 0.69999998807907,
+      y = 0.69999998807907,
+    },
+    rotation = {
+      z = -170.1697845459,
+      x = 178.8058013916,
+      y = -6.9097547531128,
+    },
   },
 }
 
 House03 = {
-  Transform = {
-    scale = {
-      x = 0.69999998807907,
-      z = 0.69999998807907,
-      y = 0.69999998807907,
-    },
-    position = {
-      x = -2.2711601257324,
-      z = 0.048837661743164,
-      y = 3.8653907775879,
-    },
-    rotation = {
-      x = 178.8058013916,
-      z = -170.1697845459,
-      y = -6.9097547531128,
-    },
-  },
-  Parent = "Asteroid04",
   BoxCollider = {
-    draw = true,
-    positionOffset = {
-      x = 0,
-      z = 0,
-      y = 2.0,
-    },
+    trigger = false,
     halfExtents = {
-      x = 4.0,
       z = 7.0,
+      x = 4.0,
       y = 4.0,
     },
-    trigger = false,
+    positionOffset = {
+      z = 0,
+      x = 0,
+      y = 2.0,
+    },
+    draw = true,
   },
+  RigidBody = {
+    rbKinematic = false,
+    rbStatic = true,
+    mass = 0.0,
+  },
+  Parent = "Asteroid04",
   RenderMesh = {
     mesh = "CasaVerde.mesh",
   },
-  RigidBody = {
-    rbStatic = true,
-    mass = 0.0,
-    rbKinematic = false,
+  Transform = {
+    position = {
+      z = 0.048837661743164,
+      x = -2.2711601257324,
+      y = 3.8653907775879,
+    },
+    scale = {
+      z = 0.69999998807907,
+      x = 0.69999998807907,
+      y = 0.69999998807907,
+    },
+    rotation = {
+      z = -170.1697845459,
+      x = 178.8058013916,
+      y = -6.9097547531128,
+    },
   },
 }
 
 MainLight = {
-  Light = {
-    specularColor = {
-      g = 1,
-      r = 1,
-      b = 1,
-    },
-    diffuseColor = {
-      g = 1.5,
-      r = 1.5,
-      b = 1.5,
-    },
-    type = "Directional",
-  },
   Transform = {
     position = {
-      x = -16.588298797607,
       z = 0.0,
+      x = -16.588298797607,
       y = 11.017509460449,
+    },
+  },
+  Light = {
+    specularColor = {
+      r = 1,
+      g = 1,
+      b = 1,
+    },
+    type = "Directional",
+    diffuseColor = {
+      r = 1.5,
+      g = 1.5,
+      b = 1.5,
     },
   },
 }
 
 Player = {
+  Transform = {
+    position = {
+      z = 0.92525243759155,
+      x = -3.8100233078003,
+      y = -0.85217499732971,
+    },
+    scale = {
+      z = -1.0,
+      x = 1.0,
+      y = 1.0,
+    },
+    rotation = {
+      z = 0.0,
+      x = 0.0,
+      y = 0.0,
+    },
+  },
   RigidBody = {
+    rbStatic = false,
+    lock = {
+      rotL = {
+        z = true,
+        x = true,
+        y = true,
+      },
+      posL = {
+        z = false,
+        x = false,
+        y = false,
+      },
+    },
     PhysicMaterial = {
       restitution = 100.0,
       dynamicFriction = 100.0,
       staticFriction = 100.0,
     },
-    lock = {
-      rotL = {
-        x = true,
-        z = true,
-        y = true,
-      },
-      posL = {
-        x = false,
-        z = false,
-        y = false,
-      },
-    },
-    rbStatic = false,
-    mass = 10,
     rbKinematic = false,
-  },
-  Transform = {
-    scale = {
-      x = 1.0,
-      z = -1.0,
-      y = 1.0,
-    },
-    position = {
-      x = -3.8100233078003,
-      z = 0.92525243759155,
-      y = -0.85217499732971,
-    },
-    rotation = {
-      x = 0.0,
-      z = 0.0,
-      y = 0.0,
-    },
-  },
-  Player = {
-    speed = 5,
+    mass = 10,
   },
   CapsuleCollider = {
     ratius = 0.5,
     trigger = false,
+    halfHeight = 0.5,
     active = true,
-    draw = true,
     positionOffset = {
-      x = 0.0,
       z = 0.0,
+      x = 0.0,
       y = 1,
     },
-    halfHeight = 0.5,
+    draw = true,
+  },
+  Player = {
+    speed = 5,
   },
 }
 
 PlayerPivot = {
   Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
-    },
     position = {
-      x = 0.0,
       z = 0.0,
+      x = 0.0,
       y = 0.0,
     },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
     rotation = {
-      x = 0.0,
       z = 0.0,
+      x = 0.0,
       y = 0.0,
     },
   },
-  Parent = "Player"
+  Parent = "Player",
 }
 
 PostOffice = {
-  Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
-    },
-    position = {
-      x = 0.0,
-      z = 0.0,
-      y = 0.0,
-    },
-    rotation = {
-      x = 0.0,
-      z = 0.0,
-      y = 0.0,
-    },
-  },
-  RigidBody = {
-    rbStatic = true,
-    mass = 0.0,
-    rbKinematic = false,
-  },
   BoxCollider = {
-    draw = true,
-    positionOffset = {
-      x = 3.5,
-      z = 3.0,
-      y = 1.0,
-    },
+    trigger = false,
     halfExtents = {
-      x = 4.0,
       z = 7.0,
+      x = 4.0,
       y = 4.0,
     },
-    trigger = false,
+    positionOffset = {
+      z = 3.0,
+      x = 3.5,
+      y = 1.0,
+    },
+    draw = true,
+  },
+  RigidBody = {
+    rbKinematic = false,
+    rbStatic = true,
+    mass = 0.0,
+  },
+  Transform = {
+    position = {
+      z = 0.0,
+      x = 0.0,
+      y = 0.0,
+    },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
+    rotation = {
+      z = 0.0,
+      x = 0.0,
+      y = 0.0,
+    },
   },
   RenderMesh = {
     mesh = "Cube.001.mesh",
@@ -833,19 +867,19 @@ PostOffice = {
 
 Spawn01 = {
   Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
-    },
     position = {
-      x = -24.228120803833,
       z = 7.4676952362061,
+      x = -24.228120803833,
       y = 29.190813064575,
     },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
     rotation = {
-      x = 180.0,
       z = 180.0,
+      x = 180.0,
       y = -49.938591003418,
     },
   },
@@ -853,19 +887,19 @@ Spawn01 = {
 
 Spawn02 = {
   Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
-    },
     position = {
-      x = -43.19242477417,
       z = -54.014957427979,
+      x = -43.19242477417,
       y = -12.988945007324,
     },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
     rotation = {
-      x = 0.0,
       z = 0.0,
+      x = 0.0,
       y = -56.405921936035,
     },
   },
@@ -873,19 +907,19 @@ Spawn02 = {
 
 Spawn03 = {
   Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
-    },
     position = {
-      x = -52.046787261963,
       z = 71.575042724609,
+      x = -52.046787261963,
       y = 0.0,
     },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
     rotation = {
-      x = 0.0,
       z = 0.0,
+      x = 0.0,
       y = 52.494956970215,
     },
   },
@@ -893,19 +927,19 @@ Spawn03 = {
 
 Spawn04 = {
   Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
-    },
     position = {
-      x = 54.479190826416,
       z = 73.946601867676,
+      x = 54.479190826416,
       y = -44.331520080566,
     },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
     rotation = {
-      x = 180.0,
       z = 180.0,
+      x = 180.0,
       y = -40.963924407959,
     },
   },
@@ -913,19 +947,19 @@ Spawn04 = {
 
 Spawn05 = {
   Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
-    },
     position = {
-      x = 53.724952697754,
       z = -42.33708190918,
+      x = 53.724952697754,
       y = 19.691093444824,
     },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
     rotation = {
-      x = 180.0,
       z = 180.0,
+      x = 180.0,
       y = 66.530128479004,
     },
   },
@@ -933,19 +967,19 @@ Spawn05 = {
 
 Spawn06 = {
   Transform = {
-    scale = {
-      x = 1.0,
-      z = 1.0,
-      y = 1.0,
-    },
     position = {
-      x = 114.67086791992,
       z = 71.575042724609,
+      x = 114.67086791992,
       y = -4.6405410766602,
     },
+    scale = {
+      z = 1.0,
+      x = 1.0,
+      y = 1.0,
+    },
     rotation = {
-      x = 180.0,
       z = 180.0,
+      x = 180.0,
       y = -5.2389712333679,
     },
   },

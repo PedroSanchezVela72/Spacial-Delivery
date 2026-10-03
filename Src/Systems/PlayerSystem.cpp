@@ -8,6 +8,7 @@
 #include "Player.h"
 #include "Transform.h"
 #include "BoxCollider.h"
+#include "CapsuleCollider.h"
 
 using namespace H;
 
@@ -30,12 +31,16 @@ void PlayerSystem::update(double deltaTime) {
 		if (keyPressed[D]) inputx += 1;
 
 		if (inputx != 0 || inputz != 0) {
-			accelerate(inputx * deltaTime, inputz * deltaTime);
+			accelerate(inputx * deltaTime, inputz * deltaTime, player);
 		}
 	}
 	else {
 		if (keyPressed[W]) inputz -= 1;
 		if (keyPressed[S]) inputz += 1;
+
+		if (inputx != 0 || inputz != 0) {
+			accelerate(inputx * deltaTime, inputz * deltaTime, van);
+		}
 	}
 
 	Transform* pivotTr = _mngr->getComponent<Transform>(pivot);
@@ -89,7 +94,7 @@ void PlayerSystem::receive(const Message* m) {
 
 void PlayerSystem::addEntity(Entity* ent, const std::string name) {
 	ILoadLua* lua = LuaSingleton::GetInstance();
-	if (lua->hasComponent(name, { "Player" })) {
+	if (name == "Player") {
 		player = ent;
 
 		std::string cmpName = "Player";
@@ -100,29 +105,32 @@ void PlayerSystem::addEntity(Entity* ent, const std::string name) {
 
 		_mngr->addComponent<Player>(ent, speed);
 	}
-	if (lua->hasComponent(name, { "CameraComponent" })) {
+	else if (name == "Camera") {
 		camera = ent;
 		Transform* cameraTr = _mngr->getComponent<Transform>(camera);
 		cameraPitch = cameraTr->rotation.getPitch(false);
 		cameraYaw = cameraTr->rotation.getYaw(false);
 	}
-	if (name == "Furgo") {
+	else if (name == "CameraVan") {
+		cameraAux = ent;
+	}
+	else if (name == "Furgo") {
 		van = ent;
 		_mngr->getSystem<IPhysicsSystem>()->setColliderFilter(_mngr->getComponent<BoxCollider>(ent), _hdlr_HANDS);
 	}
-	if(name == "PlayerPivot")
+	else if(name == "PlayerPivot")
 		pivot = ent;
-	if (name == "Hands") {
+	else if (name == "Hands") {
 		hands = ent;
 		_mngr->getSystem<IPhysicsSystem>()->setColliderFilter(_mngr->getComponent<BoxCollider>(ent), _hdlr_HANDS);
 	}
-	if (name.find("Box") == 0) {
+	else if (name.find("Box") == 0) {
 		_mngr->getSystem<IPhysicsSystem>()->setColliderFilter(_mngr->getComponent<BoxCollider>(ent), _hdlr_HANDS);
 	}
 }
 
-void PlayerSystem::accelerate(float x, float y) {
-	_mngr->getSystem<IPhysicsSystem>()->addVelocity(_mngr->getComponent<RigidBody>(player), getMovementDirection(x,y)*speed);
+void PlayerSystem::accelerate(float x, float y, Entity* ent) {
+	_mngr->getSystem<IPhysicsSystem>()->addVelocity(_mngr->getComponent<RigidBody>(ent), getMovementDirection(x,y)*speed);
 }
 
 Vector3F PlayerSystem::getMovementDirection(float inputX, float inputZ) const {
@@ -177,6 +185,20 @@ void PlayerSystem::switchToVan() {
 	inVan = true;
 	_mngr->getSystem<IPhysicsSystem>()->changeGravity(0);
 	_mngr->getComponent<BoxCollider>(hands)->active = false;
+	_mngr->getComponent<RigidBody>(player)->rbStatic = true;
+	_mngr->getComponent<CapsuleCollider>(player)->active = false;
+	_mngr->getComponent<RigidBody>(van)->rbStatic = false;
+	_mngr->getComponent<BoxCollider>(van)->active = true;
+	Transform* cameraTr = _mngr->getComponent<Transform>(cameraAux);
+	cameraPitch = cameraTr->rotation.getPitch(false);
+	cameraYaw = cameraTr->rotation.getYaw(false);
+	Entity* aux = cameraAux;
+	cameraAux = camera;
+	camera = aux;
+	Message* m = new Message();
+	m->id = _m_CHANGE_MAINCAMERA;
+	m->entity.entityPtr = camera;
+	_mngr->send(m);
 }
 
 void PlayerSystem::switchToPlayer() {
@@ -185,4 +207,5 @@ void PlayerSystem::switchToPlayer() {
 	playerTr->position = vanTr->position;
 	inVan = false;
 	_mngr->getSystem<IPhysicsSystem>()->changeGravity(9.8);
+	_mngr->getComponent<BoxCollider>(hands)->active = false;
 }

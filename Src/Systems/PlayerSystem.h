@@ -18,7 +18,7 @@ private:
 	enum KEYS { A, S, D, W, Q, E, F, SPACE, MAX_KEYS };
 
 	void addEntity(H::Entity* ent, const std::string name);
-	void accelerate(float x, float y);
+	void accelerate(float x, float y, H::Entity* ent);
 	void moveCamera(float x, float y);
 	void switchToVan();
 	void switchToPlayer();
@@ -29,6 +29,7 @@ private:
 	H::Entity* player;
 	H::Entity* van;
 	H::Entity* camera;
+	H::Entity* cameraAux;
 	H::Entity* pivot;
 	H::Entity* hands;
 	float sensitivity = 0.2;
